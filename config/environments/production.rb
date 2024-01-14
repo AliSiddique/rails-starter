@@ -63,6 +63,7 @@ Rails.application.configure do
   # information to avoid inadvertent exposure of personally identifiable information (PII). If you
   # want to log everything, set the level to "debug".
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
+  config.secret_key_base = "dsiodsisdfoijdsfijsdfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsfoijdsf"
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
