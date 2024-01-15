@@ -52,8 +52,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"></path></svg
-            ></button
+                d="M6 18L18 6M6 6l12 12"></path></svg></button
           >
         </div><nav
           :class="{'flex': open, 'hidden': !open}"
@@ -145,7 +144,13 @@
     </div>
   </div>
 </section>
- 
+ <% if user_signed_in? %>
+  <p>Welcome, <%= current_user.email %>!</p>
+  <!-- Display user-specific content or options -->
+<% else %>
+  <p>You are not signed in.</p>
+  <!-- Display content or options for non-logged-in users -->
+<% end %>
 <ul>
   <% @articles.each do |article| %>
     <li>
